@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bouncy ball CSS Animation</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .background {
+            position: relative;
+            background-color: blue;
+            width: 100vw;
+            height: 100vh;
+        }
+
+        .ball {
+            background-color: red;
+            width: 122px;
+            height: 122px;
+            border-radius: 70px;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            animation: animatex 3s linear infinite ,    
+                       animatey 1s ease-out infinite alternate
+        }
+
+        @keyframes animatex {
+            from {
+                left: 0;
+            }
+            to {
+                left: 100%;
+            }
+        }
+
+        @keyframes animatey {
+            from {
+                bottom: 0;
+            }
+            to {
+                bottom: 50%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="background">
+        <div class="ball">
+
+        </div>
+    </div>
+</body>
+</html>
